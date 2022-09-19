@@ -1,0 +1,14 @@
+:root {
+  --text-color: white;
+  --background-color: black;
+  --box-shadow-color: 0px 0px 8px rgb(255, 255, 255);
+  --header-footer-color: rgb(0, 0, 0);
+  --container-color: rgba(255, 228, 196, 0.184);
+}
+.darkmode {
+  --text-color: black;
+  --background-color: white;
+  --box-shadow-color: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  --header-footer-color: aliceblue;
+  --container-color: rgba(210, 105, 30, 0.116);
+}

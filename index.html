@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Resume Generator</title>
+</head>
+<body>
+    <header class="contentF text-center" id="headerF">
+        <h2>Resume Generator</h2>
+        <div class="container fieldRequired blink">
+                <span class="important">*</span> fileds are required
+        </div>
+    </header>
+    <div class="darkmode">
+        <img id="dark" src="media\moon.png" alt="moon-image" />
+      </div>
+    <div class="container" id="cv-form">
+        <div class="row formInputSection">
+            <div class="col md-6 mt-4">
+                <h2 class="piFormSec text-center">Personal Information</h2>
+                <div class="row">
+                    <div class="col md-6">
+                        <div class="form-group ">
+                            <label for="">First Name</label> <span class="important">*</span><span id="warnF"></span>
+                            <input type="text" placeholder="Enter here" id="fname" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col md-6">
+                        <div class="form-group">
+                            <label for="">Last Name</label>
+                            <input type="text" placeholder="Enter here" id="lname" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Profession</label>
+                    <input type="text" placeholder="Enter here" id="profession" class="form-control">
+                </div>
+                <div class="row">
+                    <div class="col md-6">
+                        <div class="form-group ">
+                            <label for="">Contact No.</label> <span class="important">*</span><span id="warnC"></span>
+                            <input type="number" placeholder="Enter here" id="contact" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col md-6">
+                        <div class="form-group">
+                            <label for="">Whatsapp No.</label>
+                            <input type="number" placeholder="Enter here" id="whatsapp" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Email Id</label> <span class="important">*</span><span id="warnE"></span>
+                    <input type="email" placeholder="Enter here" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Address</label>
+                    <textarea name="address" id="address" class="form-control" placeholder="Enter in the format of City,State-Pincode"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col md-6">
+                        <div class="form-group ">
+                            <label for="">Date of Birth</label>
+                            <input type="date" id="dob" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col md-6">
+                        <div class="form-group">
+                            <label for="">Gender</label><br>
+                            <select name="" id="gender" class="form-control">
+                                <option value="" selected disabled>--Please choose an option--</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="TransGender">TransGender</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col md-6">
+                        <div class="form-group ">
+                            <label for="">Nationality</label>
+                            <input type="text" placeholder="Enter here" id="nationality" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col md-6">
+                        <div class="form-group">
+                            <label for="">Religion</label>
+                            <input type="text" placeholder="Enter here" id="religion" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col md-6">
+                        <div class="form-group ">
+                            <label for="">Category</label>
+                            <select name="" id="category" class="form-control">
+                                <option value="" selected disabled>--Please choose an option--</option>
+                                <option value="General">General</option>
+                                <option value="Other Backward Class">Other Backward Class</option>
+                                <option value="Scheduled Caste">Scheduled Caste</option>
+                                <option value="Scheduled Tribe">Scheduled Tribe</option>
+                                <option value="Physically Disabled">Physically Disabled</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col md-6">
+                        <div class="form-group">
+                            <label for="">Marital Status</label><br>
+                            <select name="" id="maritalstatus" class="form-control">
+                                <option value="" selected disabled>--Please choose an option--</option>
+                                <option value="Single">Single</option>
+                                <option value="Married">Married</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group" id="lk">
+                            <label for="">Languages Known</label> <span class="important">*</span><span id="warnL"></span>
+                            <input type="text" placeholder="Enter here" class="form-control lkField" id="language">
+                        </div>
+                    </div>
+                    <div class="col-md-6" id="lkaddButton">
+                       <div class="row addRemoveLK">
+                        <div class="col-md-4">
+                            <button class="btn btn-primary btn-sm" onclick="addnewLK()">Add more</button>
+                        </div>
+                        <div class="col-md-1">
+                            <button class="btn btn-primary btn-sm" onclick="removeLK()" id="lk_remove_field">Less</button>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group" id="hb" >
+                            <label for="">Hobbies</label>
+                            <input type="text" placeholder="Enter here" class="form-control hbField">
+                        </div>
+                    </div>
+                    <div class="col-md-6" id="hbaddButton">
+                       <div class="row addRemoveHB">
+                        <div class="col-md-4">
+                            <button class="btn btn-primary btn-sm" onclick="addnewHB()">Add more</button>
+                        </div>
+                        <div class="col-md-1">
+                            <button class="btn btn-primary btn-sm" onclick="removeHB()" id="hb_remove_field">Less</button>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Profile photo</label> <span class="important">*</span><span id="warnP"></span>
+                    <input type="file" id="imgField" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Linkedin URL</label>
+                    <input type="url" placeholder="Enter here" id="linkedin" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Github URL</label>
+                    <input type="url" placeholder="Enter here" id="github" class="form-control">
+                </div>
+            </div>
+            <div class="col md-6 mt-4">
+                <h2 class="piFormSec text-center">Professional Information</h2>
+                <div class="form-group">
+                    <label for="">Objective</label>
+                    <textarea name="objective" id="objective" class="form-control" placeholder="Enter here"></textarea>
+                </div>
+                <div class="form-group" id="we">
+                    <label for="">Experience</label>
+                    <textarea name="experience" class="form-control weField" placeholder="Enter here"></textarea>
+                </div>
+                <div class="row row-md-12 offset-4 text-center addRemoveWE">
+                    <div class="col-md-3">
+                        <button class="btn btn-primary btn-sm mt-2" onclick="addnewWE()">Add more</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-primary btn-sm mt-2" onclick="removeWE()" id="we_remove_field">Less</button>
+                    </div>
+                </div>
+                <div class="form-group" id="pj">
+                    <label for="">Project</label> <span class="important">*</span><span id="warnPJ"></span>
+                    <textarea id="project" class="form-control pjField" placeholder="Project Description&#10;Project Url"></textarea>
+                </div>
+                <div class="row row-md-12 offset-4 text-center addRemoveWE">
+                    <div class="col-md-3">
+                        <button class="btn btn-primary btn-sm text-center mt-2" onclick="addnewPJ()">Add more</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-primary btn-sm text-center mt-2" onclick="removePJ()" id="pj_remove_field">Less</button>
+                    </div>
+                </div>
+                <div class="form-group " id="ts">
+                    <label for="">Technical Skills</label> <span class="important">*</span><span id="warnT"></span>
+                    <input type="text" placeholder="Enter here" class="form-control tsField" id="skill">
+                </div>
+                <div class="row row-md-12 offset-4 text-center addRemoveWE">
+                    <div class="col-md-3">
+                        <button class="btn btn-primary btn-sm text-center mt-2" onclick="addnewTS()">Add more</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-primary btn-sm text-center mt-2" onclick="removeTS()" id="ts_remove_field">Less</button>
+                    </div>
+                </div>
+                <div class="form-group" id="eq">
+                    <label for="">Educational Qualification</label> <span class="important">*</span><span id="warnED"></span>
+                    <textarea id="qualification" class="form-control eqField" placeholder="Latest Qualification with Stream (Year)&#10;College name,City&#10;University,State&#10;Score - % or CGPA" rows="4"></textarea>
+                </div>
+                <div class="row row-md-12 offset-4 text-center addRemoveWE">
+                    <div class="col-md-3">
+                        <button class="btn btn-primary btn-sm text-center mt-2" onclick="addnewEQ()">Add more</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-primary btn-sm text-center mt-2" onclick="removeEQ()" id="eq_remove_field">Less</button>
+                    </div>
+                </div>
+                <div class="form-group" id="aw">
+                    <label for="">Awards and Achievement</label>
+                    <textarea name="" class="form-control awField" placeholder="Enter here"></textarea>
+                </div>
+                <div class="row row-md-12 offset-4 text-center addRemoveWE">
+                    <div class="col-md-3">
+                        <button class="btn btn-primary btn-sm text-center mt-2" onclick="addnewAW()">Add more</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-primary btn-sm text-center mt-2" onclick="removeAW()" id="aw_remove_field">Less</button>
+                    </div>
+                </div>
+               <div class="form-group" id="ca">
+                    <label for="">Co-curricular activities</label>
+                    <textarea name="" class="form-control caField" placeholder="Enter here"></textarea>
+                </div>
+                <div class="row row-md-12 offset-4 text-center addRemoveWE">
+                    <div class="col-md-3">
+                        <button class="btn btn-primary btn-sm text-center mt-2" onclick="addnewCA()">Add more</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-primary btn-sm text-center mt-2" onclick="removeCA()" id="ca_remove_field">Less</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col-md-8 aggrement">
+                <p class="paraForm">I certify that the above facts are true to the best of my knowledge and belief
+                    and I understand that I subject myself to disciplinary action in the event that
+                    the above facts are found to be falsified.</p>
+                <input type="checkbox" id="checkBoxBtn"><label class="p-2" for="">Agree Terms and Conditions</label>
+            </div>
+        </div>
+        <div class="container text-center mt-3">
+            <button class="btn btn-danger mx-2" onclick="formReset()">Clear</button>
+            <button class="btn btn-info mx-2" onclick="previewCV()">Preview</button>
+            <button class="btn btn-success mx-2" onclick="generateCV()">Generate CV</button>
+        </div>
+        <div class="contactUsSection row my-5">
+            <div class="col-md-6">
+                <div class="container text-center">
+                    <img class="img-fluid" src="media\Work.jpg" alt="contact-image" style="width: 500px; border-radius: 20px; border-bottom: 2px solid gray; border-right: 2px solid gray;" />
+                  </div>
+            </div>
+            <div class="col-md-6 mt-5">
+                <div class="container">
+                    <div class="content">
+                      <h2 class="piFormSec">Get in touch with me here!</h2>
+                    </div>
+                    <form onsubmit="sendEmail(); reset(); return false; ">
+                    <div class="form-group">
+                        <label for="name">Name :</label>
+                        <input type="text" placeholder="Enter your name" class="form-control" id="senderName" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email id : </label>
+                        <input type="email" placeholder="Enter your email here" id="senderEmail" class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Contact :</label>
+                        <input type="number" placeholder="Enter your mobile no." class="form-control" id="senderContact" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your message :</label>
+                        <textarea name="message" id="senderMessage" class="form-control" required></textarea>
+                    </div>
+                    <button class="btn btn-warning mt-4" type="submit" onclick="submitMessage()">Submit</button>
+                    </form>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footerF">
+        <div class="footerSection row text-center mt-5">
+            <div class="col-md-12">
+            <div class="content"><h2 class="piFormSec">Bhabani Sankar Padhy</h2></div>
+        <div class="contact-items">
+          <a href="mailto:bspadhy1999@gmail.com"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+          <a href="tel:+7606823010"><i class="fa-solid fa-phone"></i></a>
+          <a
+            href="https://api.whatsapp.com/send?phone=6370023010"
+            target="_blank"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/bhabani-sankar-padhy-3aa1b4146/"
+            target="_blank"
+            class="social-media-icon"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a
+            href="https://github.com/bspadhy1999"
+            target="_blank"
+            class="social-media-icon"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+        <div class="copyright">
+          <p class="paraForm">Copyright &copy;2022, All rights are reserved</p>
+        </div>
+            </div>
+        </div>
+    </footer>
+    <div class="container text-center" id="message-submit">
+        <h2 id="message-submit-content">Thank you for contacting me.</h2>
+        <div class="container text-center">
+            <button class="btn btn-md btn-primary" onclick="homePage()">
+                Home Page
+            </button>
+        </div>
+    </div>
+    <div class="container text-center my-auto" id="processing-stage">
+        <h2 class="processingContent">Processing. Please wait .. ..</h2>
+        <img src="media\loading.gif" alt="loading-image" class="img-fluid" style="width: 350px;">
+        <h4 class="processingContent">This may take up to 30 seconds to complete.</h4>
+        <h4 class="processingContent">Do not press Back or Refresh.</h4>
+
+    </div>
+    <div class="container text-center" id="sucessful-stage">
+        <img src="media\success.png" alt="sucess image" style="width: 200px;">
+        <br><br>
+        <h2 class="generatingContent">Generating Sucessfully.</h2>
+    </div>
+    <div class="container" id="cv-template">
+        <div class="container template-area" id="printToPDF" style="width:2480px;">
+        <div class="row" id="top-template">
+            <div  class="col-md-3 text-center pl-5 my-4" id="profileImage">
+                <img class="text-center" src="media\profile.png" alt="my image" id="imgT" style="width: 220px; height: 220px; border-radius: 50%;">
+            </div>
+            <div class="col-md-4 my-5 text-center">
+                <div class="nameT">
+                    <div class="fnameT">
+                        <p id="fname1">Lorem ipsum</p>
+                    </div>
+                    <div class="lnameT">
+                        <p id="lname1">lorem</p>
+                    </div>
+                </div>
+                <p id="profession1">Lorem ipsum</p>
+            </div>  
+            <div class="col-md-5 mt-4">
+                    <i class="fa-solid fa-phone" id="icon"></i><span id="contact1">1234567891</span><br>
+                    <i class="fa-brands fa-whatsapp" id="icon"></i><span id="whatsapp1">1234567892</span><br>
+                    <i class="fa-solid fa-envelope" id="icon"></i><span id="email1">userExample@gmail.com</span><br>
+                    <i class="fa-solid fa-earth-asia" id="icon"></i><span id="address1">City, State-Pin Code</span><br>
+                    <i class="fa-brands fa-linkedin-in p-1" id="icon"></i><span id="linkedin1">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</span><br>
+                    <i class="fa-brands fa-github" id="icon"></i><span id="github1">Lorem ipsum dolor sit amet consectetur.</span><br>
+            </div>
+        </div>
+        <div class="row" id="bottom-template">
+            <div class="col-md-4" id="left-template">
+                <div class="container">
+                    <p class="pChange">Personal Information</p>
+                    <hr>
+                    <ul>
+                        <li>D.O.B - <span id="dob1">00.00.0000</span></li>
+                        <li>Gender - <span id="gender1">lorem</span></li>
+                        <li>Category - <span id="category1">lorem</span></li>
+                        <li>Nationality - <span id="nationality1">lorem</span></li>
+                        <li>Religion - <span id="religion1">lorem</span></li>
+                        <li>Marital Status - <span id="maritalstatus1">lorem</span></li>
+                    </ul>
+                    <p class="pChange">Technical Skills</p>
+                    <hr>
+                        <ul id="tsT">
+                            <li>lorem</li>
+                            <li>lorem</li>
+                            <li>lorem</li>
+                        </ul>
+                    <p class="pChange">Languages</p>
+                    <hr>
+                    <ul id="lkT">
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                    </ul>
+                    <p class="pChange">Hobbies</p>
+                    <hr>
+                    <ul id="hbT">
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8" id="right-template">
+                <div class="container">
+                <p class="pChange">Objective</p>
+                <hr>
+                <p id="objective1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae culpa, voluptate quisquam reprehenderit veritatis ad libero eaque illo saepe exercitationem?</p>
+                <br>
+                <div class="wepT">
+                    <p class="pChange">Experience</p>
+                    <hr>
+                    <ul id="weT">
+                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, perferendis!</li>
+                        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, perferendis!</li>
+                    </ul>
+                </div>
+                <p class="pChange">Project</p>
+                <hr>
+                <ul id="pjT">
+                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing. <br>
+                        Lorem ipsum dolor sit amet consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing. <br>
+                        Lorem ipsum dolor sit amet consectetur.</li>
+                </ul>
+                <br>
+                <p class="pChange">Education</p>
+                <hr>
+                <ul id="edT">
+                    <li>Latest Qualification with Stream (Year) <br> 
+                        College name, City <br>
+                        University, State <br>
+                        Score - % or CGPA</li>
+                    <li>Latest Qualification with Stream (Year) <br> 
+                        College name, City <br>
+                        University, State <br>
+                        Score - % or CGPA</li>
+                    <li>Latest Qualification with Stream (Year) <br> 
+                        College name, City <br>
+                        University, State <br>
+                        Score - % or CGPA</li>
+                </ul>
+                <p class="pChange">Awards and Achievement</p>
+                <hr>
+                <ul id="awT">
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+                </ul>
+                <p class="pChange">Co-curricular activities</p>
+                <hr>
+                <ul id="caT">
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="row text-center mt-4">
+            <div class="col-md-12">
+                <button class="btn btn-primary btn-md mx-3" onclick="printCV()" id="printCvBtn">
+                    Download CV
+                </button>
+                <button class="btn btn-primary btn-md" onclick="homePage()" id="homePageBtn">
+                    Home Page
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js" integrity="sha512-1g3IT1FdbHZKcBVZzlk4a4m5zLRuBjMFMxub1FeIRvR+rhfqHFld9VFXXBYe66ldBWf+syHHxoZEbZyunH6Idg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script/script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+</html>
